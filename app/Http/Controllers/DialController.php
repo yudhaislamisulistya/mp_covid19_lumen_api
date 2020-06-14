@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Hospital;
+use App\Dial;
 use Illuminate\Http\Request;
 
-class HospitalController extends Controller
+class DialController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -14,47 +14,38 @@ class HospitalController extends Controller
      */
     public function __construct()
     {
-        //
     }
 
     public function index(){
-        $data = Hospital::all();
+        $data = Dial::all();
         return response($data);
     }
 
     public function show($id)
     {
-        $data = Hospital::where('id_hospital', $id)->get();
+        $data = Dial::where('id_dial', $id)->get();
         return response($data);
     }
     public function store(Request $request)
     {
-        $data = new Hospital();
+        $data = new Dial();
         $data->name = $request->input('name');
-        $data->address = $request->input('address');
-        $data->city = $request->input('city');
-        $data->longitude = $request->input('longitude');
-        $data->latitude = $request->input('latitude');
+        $data->cellphone = $request->input('cellphone');
         $data->save();
         return response('Berhasil Tambah Data');
     }
     public function update(Request $request, $id)
     {
-        $data = Hospital::find($id);
+        $data = Dial::find($id);
         $data->name = $request->input('name');
-        $data->address = $request->input('address');
-        $data->city = $request->input('city');
-        $data->longitude = $request->input('longitude');
-        $data->latitude = $request->input('latitude');
+        $data->cellphone = $request->input('cellphone');
         $data->save();
         return response('Berhasil Merubah Data');
     }
 
     public function destroy($id)
     {
-        $data = Hospital::where('id_hospital', $id)->delete();
+        $data = Dial::where('id_dial', $id)->delete();
         return response('Berhasil Menghapus Data');
     }
-
-    //
 }

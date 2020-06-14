@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Hospital;
+use App\Spot;
 use Illuminate\Http\Request;
 
-class HospitalController extends Controller
+class SpotController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -18,18 +18,18 @@ class HospitalController extends Controller
     }
 
     public function index(){
-        $data = Hospital::all();
+        $data = Spot::all();
         return response($data);
     }
 
     public function show($id)
     {
-        $data = Hospital::where('id_hospital', $id)->get();
+        $data = Spot::where('id_spot', $id)->get();
         return response($data);
     }
     public function store(Request $request)
     {
-        $data = new Hospital();
+        $data = new Spot();
         $data->name = $request->input('name');
         $data->address = $request->input('address');
         $data->city = $request->input('city');
@@ -40,7 +40,7 @@ class HospitalController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $data = Hospital::find($id);
+        $data = Spot::find($id);
         $data->name = $request->input('name');
         $data->address = $request->input('address');
         $data->city = $request->input('city');
@@ -52,7 +52,7 @@ class HospitalController extends Controller
 
     public function destroy($id)
     {
-        $data = Hospital::where('id_hospital', $id)->delete();
+        $data = Spot::where('id_spot', $id)->delete();
         return response('Berhasil Menghapus Data');
     }
 
