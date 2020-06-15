@@ -2,18 +2,38 @@
 # Base URL
 #### Base URL : https://mp-covid19-api.000webhostapp.com/public/api/
 
-Example :  https://mp-covid19-api.000webhostapp.com/public/api/hospital
+Example :  https://mp-covid19-api.000webhostapp.com/public/api/hospitals
 ```json
 [
--   {
-    -   id_hospital:  8,
-    -   name:  "RSUD PALU",
-    -   address:  "Jl. Undata",
-    -   city:  "Ampana",
-    -   longitude:  "0.223",
-    -   latitude:  "12.2222",
-    -   created_at:  "2020-06-14T05:20:28.000000Z",
-    -   updated_at:  "2020-06-14T05:20:28.000000Z"
+    {
+        "id_hospital": 1,
+        "name": "RSUD Ampana",
+        "address": "Jl. Sultan Hasanudin No.32, Ampana, Ampana Kota, Kabupaten Tojo Una-Una, Sulawesi Tengah 94683",
+        "city": "Ampana",
+        "longitude": "-0.8703779",
+        "latitude": "121.5669705",
+        "created_at": "2020-06-13T09:55:35.000000Z",
+        "updated_at": "2020-06-13T09:55:35.000000Z"
+    },
+    {
+        "id_hospital": 5,
+        "name": "RSUD PALU",
+        "address": "Jl. Undata",
+        "city": "Ampana",
+        "longitude": "0.223",
+        "latitude": "12.2222",
+        "created_at": "2020-06-14T05:19:58.000000Z",
+        "updated_at": "2020-06-14T05:19:58.000000Z"
+    },
+    {
+        "id_hospital": 6,
+        "name": "RSUD PALU",
+        "address": "Jl. Undata",
+        "city": "Ampana",
+        "longitude": "0.223",
+        "latitude": "12.2222",
+        "created_at": "2020-06-14T05:20:11.000000Z",
+        "updated_at": "2020-06-14T05:20:11.000000Z"
     }
 ]
 ```
